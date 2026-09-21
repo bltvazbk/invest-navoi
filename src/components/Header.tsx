@@ -35,28 +35,26 @@ export function Header() {
   }, [menuOpen])
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
-        scrolled || menuOpen
-          ? 'border-b border-line bg-bg/90 backdrop-blur-md'
-          : 'border-b border-transparent bg-transparent'
-      }`}
-    >
+    <header className="fixed inset-x-0 top-0 z-40 border-b border-line bg-bg/95 shadow-sm backdrop-blur-md">
+      {/* Gold accent bar */}
+      <div className="h-1 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500" />
+
       {/* Government attribution strip — collapses away on scroll */}
       <div
-        className={`overflow-hidden border-b border-line/60 transition-all duration-300 ${
-          scrolled ? 'max-h-0 opacity-0' : 'max-h-20 opacity-100'
+        className={`overflow-hidden border-b border-line bg-bgalt transition-all duration-300 ${
+          scrolled ? 'max-h-0 border-b-0 opacity-0' : 'max-h-24 opacity-100'
         }`}
       >
-        <div className="container-wide py-2">
+        <div className="container-wide">
           <GovBar />
         </div>
       </div>
 
-      <div className="container-wide flex h-[68px] items-center justify-between gap-4">
+      {/* Main navigation row */}
+      <div className="container-wide flex h-[64px] items-center justify-between gap-4">
         <Logo />
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Primary">
           {NAV.map((item) => (
             <a
               key={item.id}

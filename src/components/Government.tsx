@@ -6,30 +6,47 @@ import { Reveal } from './Reveal'
 import { SectionHeading } from './SectionHeading'
 
 function LeaderCard({ leader }: { leader: Leader }) {
-  const { t, lang } = useLanguage()
+  const { lang } = useLanguage()
   const [failed, setFailed] = useState(false)
   const showImg = leader.photo && !failed
 
   return (
-    <div className="glass-card p-4 text-center">
-      <div className="relative mx-auto h-24 w-24 overflow-hidden rounded-full border border-line bg-bgalt">
+    <div className="glass-card flex items-center gap-4 p-4 sm:p-5">
+      <div className="relative h-24 w-20 shrink-0 overflow-hidden rounded-xl border border-line bg-bgalt sm:h-28 sm:w-24">
         <div className="absolute inset-0 grid place-items-center bg-gradient-to-br from-navy-700 to-navy-950 text-gold-500/50">
-          <Icon name="users" size={30} />
+          <Icon name="users" size={28} />
         </div>
         {showImg && (
           <img
             src={leader.photo}
-            alt=""
+            alt={L(leader.name, lang)}
             loading="lazy"
             onError={() => setFailed(true)}
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover object-top"
           />
         )}
       </div>
-      <div className="mt-3 text-sm font-semibold text-heading">
-        {leader.name || t('government.namePlaceholder')}
+      <div className="min-w-0">
+        <div className="font-display text-base font-bold text-heading">{L(leader.name, lang)}</div>
+        <div className="mt-0.5 text-xs font-medium leading-snug text-accenttext">
+          {L(leader.role, lang)}
+        </div>
+        {leader.reception && (
+          <div className="mt-2 flex items-center gap-1.5 text-[11px] text-subtle">
+            <Icon name="clock" size={12} />
+            {L(leader.reception, lang)}
+          </div>
+        )}
+        {leader.phone && (
+          <a
+            href={`tel:${leader.phone.replace(/\s/g, '')}`}
+            className="mt-1 flex items-center gap-1.5 text-[11px] text-muted transition hover:text-accenttext"
+          >
+            <Icon name="phone" size={12} />
+            {leader.phone}
+          </a>
+        )}
       </div>
-      <div className="mt-0.5 text-xs text-muted">{L(leader.role, lang)}</div>
     </div>
   )
 }
@@ -46,7 +63,7 @@ export function Government() {
           subtitle={t('government.subtitle')}
         />
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-[1fr_1.05fr]">
+        <div className="mt-14 grid gap-6 lg:grid-cols-2">
           {/* About the department */}
           <Reveal>
             <div className="glass-card h-full p-8">
@@ -94,11 +111,11 @@ export function Government() {
 
           {/* Leadership */}
           <Reveal delay={120}>
-            <div className="h-full">
+            <div className="flex h-full flex-col">
               <h3 className="mb-4 font-display text-base font-bold text-heading">
                 {t('government.leadershipTitle')}
               </h3>
-              <div className="grid gap-4 sm:grid-cols-3">
+              <div className="flex flex-1 flex-col justify-center gap-4">
                 {leadership.map((leader, i) => (
                   <LeaderCard key={i} leader={leader} />
                 ))}

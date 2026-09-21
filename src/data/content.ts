@@ -520,24 +520,38 @@ export const processSteps: ProcessStep[] = [
 // Until a name is set, the role card shows the "Full name" placeholder.
 export interface Leader {
   role: Localized
-  name: string
+  name: Localized
   photo?: string
+  phone?: string
+  reception?: Localized
 }
 
+// Source: official Navoi region government portal (gov.uz/en/navoi/guides).
 export const leadership: Leader[] = [
   {
-    role: { en: 'Head of the Department', ru: 'Начальник управления', uz: "Boshqarma boshlig'i" },
-    name: '',
-    photo: '/images/leaders/head.jpg',
+    role: { en: 'Governor of the Navoi Region', ru: 'Хоким Навоийской области', uz: 'Navoiy viloyati hokimi' },
+    name: { en: 'Normat Tursunov', ru: 'Нормат Турсунов', uz: 'Normat Tursunov' },
+    photo: '/images/leaders/tursunov.jpg',
+    phone: '+998 79 229 62 06',
+    reception: {
+      en: 'Reception: 4th Saturday, 10:00–12:30',
+      ru: 'Приём: 4-я суббота, 10:00–12:30',
+      uz: 'Qabul: har oy 4-shanba, 10:00–12:30',
+    },
   },
   {
-    role: { en: 'First Deputy Head', ru: 'Первый заместитель начальника', uz: 'Birinchi o‘rinbosar' },
-    name: '',
-    photo: '/images/leaders/deputy1.jpg',
-  },
-  {
-    role: { en: 'Deputy Head', ru: 'Заместитель начальника', uz: 'O‘rinbosar' },
-    name: '',
-    photo: '/images/leaders/deputy2.jpg',
+    role: {
+      en: 'Head of the Department of Investment, Industry and Trade',
+      ru: 'Начальник управления инвестиций, промышленности и торговли',
+      uz: 'Investitsiyalar, sanoat va savdo boshqarmasi boshlig‘i',
+    },
+    name: { en: 'Elbek Gafforov', ru: 'Элбек Гаффоров', uz: 'Elbek G‘afforov' },
+    photo: '/images/leaders/gafforov.jpg',
+    phone: '+998 79 229 62 23',
+    reception: {
+      en: 'Reception: Wednesday, 08:00–17:00',
+      ru: 'Приём: среда, 08:00–17:00',
+      uz: 'Qabul: chorshanba, 08:00–17:00',
+    },
   },
 ]

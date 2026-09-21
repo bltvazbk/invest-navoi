@@ -10,7 +10,7 @@ export function Hero() {
   const { t, lang } = useLanguage()
 
   return (
-    <section id="top" className="relative overflow-hidden pt-[120px]">
+    <section id="top" className="relative overflow-hidden pt-[128px]">
       {/* Background layers */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-bgalt via-bg to-bg" />
