@@ -20,12 +20,14 @@ export function Incentives() {
           {incentives.map((item, i) => (
             <Reveal key={i} delay={(i % 3) * 80}>
               <div className="glass-card glass-card-hover flex h-full items-start gap-4 p-7">
-                <span className="inline-grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-400">
+                <span className="inline-grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-gold-500/30 bg-gold-500/10 text-accenttext">
                   <Icon name={item.icon} size={22} />
                 </span>
                 <div>
-                  <h3 className="font-display text-base font-bold text-white">{L(item.title, lang)}</h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-slate-400">{L(item.text, lang)}</p>
+                  <h3 className="font-display text-base font-bold text-heading">
+                    {L(item.title, lang)}
+                  </h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted">{L(item.text, lang)}</p>
                 </div>
               </div>
             </Reveal>

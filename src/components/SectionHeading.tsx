@@ -22,7 +22,7 @@ export function SectionHeading({
       </Reveal>
       {subtitle && (
         <Reveal delay={120}>
-          <p className="mt-4 text-base leading-relaxed text-slate-300">{subtitle}</p>
+          <p className="mt-4 text-base leading-relaxed text-muted">{subtitle}</p>
         </Reveal>
       )}
     </div>

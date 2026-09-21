@@ -10,10 +10,10 @@ export function Logo({ compact = false }: { compact?: boolean }) {
       </span>
       {!compact && (
         <span className="flex flex-col leading-none">
-          <span className="font-display text-lg font-extrabold tracking-tight text-white">
-            Invest<span className="text-gold-400">Navoi</span>
+          <span className="font-display text-lg font-extrabold tracking-tight text-heading">
+            Invest<span className="text-accenttext">Navoi</span>
           </span>
-          <span className="mt-1 text-[11px] font-medium uppercase tracking-[0.18em] text-slate-400">
+          <span className="mt-1 text-[11px] font-medium uppercase tracking-[0.18em] text-muted">
             {t('brand.region')}
           </span>
         </span>

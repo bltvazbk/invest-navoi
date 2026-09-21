@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Icon } from './Icon'
 import { Logo } from './Logo'
+import { GovBar } from './GovBar'
 import { LanguageSwitcher } from './LanguageSwitcher'
+import { ThemeToggle } from './ThemeToggle'
 
 const NAV = [
   { id: 'why', key: 'nav.why' },
@@ -36,11 +38,22 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
         scrolled || menuOpen
-          ? 'border-b border-white/10 bg-navy-950/90 backdrop-blur-md'
+          ? 'border-b border-line bg-bg/90 backdrop-blur-md'
           : 'border-b border-transparent bg-transparent'
       }`}
     >
-      <div className="container-wide flex h-[72px] items-center justify-between gap-4">
+      {/* Government attribution strip — collapses away on scroll */}
+      <div
+        className={`overflow-hidden border-b border-line/60 transition-all duration-300 ${
+          scrolled ? 'max-h-0 opacity-0' : 'max-h-20 opacity-100'
+        }`}
+      >
+        <div className="container-wide py-2">
+          <GovBar />
+        </div>
+      </div>
+
+      <div className="container-wide flex h-[68px] items-center justify-between gap-4">
         <Logo />
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
@@ -48,7 +61,7 @@ export function Header() {
             <a
               key={item.id}
               href={`#${item.id}`}
-              className="rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white"
+              className="rounded-lg px-3 py-2 text-sm font-medium text-body transition hover:bg-surface-2 hover:text-heading"
             >
               {t(item.key)}
             </a>
@@ -56,13 +69,14 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <LanguageSwitcher />
           <a href="#contact" className="btn-primary hidden sm:inline-flex">
             {t('nav.investNow')}
             <Icon name="arrow-right" size={16} />
           </a>
           <button
-            className="grid h-10 w-10 place-items-center rounded-lg border border-white/15 bg-white/5 text-white lg:hidden"
+            className="grid h-10 w-10 place-items-center rounded-lg border border-line bg-surface-2 text-heading lg:hidden"
             onClick={() => setMenuOpen((o) => !o)}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
@@ -74,23 +88,19 @@ export function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="border-t border-white/10 bg-navy-950/98 lg:hidden">
+        <div className="border-t border-line bg-bg lg:hidden">
           <nav className="container-wide flex flex-col py-4" aria-label="Mobile">
             {NAV.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
                 onClick={() => setMenuOpen(false)}
-                className="rounded-lg px-3 py-3 text-base font-medium text-slate-200 transition hover:bg-white/5 hover:text-white"
+                className="rounded-lg px-3 py-3 text-base font-medium text-body transition hover:bg-surface-2 hover:text-heading"
               >
                 {t(item.key)}
               </a>
             ))}
-            <a
-              href="#contact"
-              onClick={() => setMenuOpen(false)}
-              className="btn-primary mt-3 w-full"
-            >
+            <a href="#contact" onClick={() => setMenuOpen(false)} className="btn-primary mt-3 w-full">
               {t('nav.investNow')}
               <Icon name="arrow-right" size={16} />
             </a>

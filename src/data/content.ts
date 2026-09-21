@@ -45,6 +45,9 @@ export interface Project {
   title: Localized
   sector: Localized
   text: Localized
+  /** Optional photo. Drop a file at this path in public/ to show it;
+   *  if missing/undefined a themed gradient placeholder is shown. */
+  image?: string
 }
 
 export interface Opportunity {
@@ -250,6 +253,7 @@ export const projects: Project[] = [
   {
     icon: 'gem',
     status: 'operating',
+    image: '/images/projects/nmmc.jpg',
     title: { en: 'Navoi Mining & Metallurgical Combinat', ru: 'Навоийский ГМК', uz: 'Navoiy kon-metallurgiya kombinati' },
     sector: { en: 'Mining & Metallurgy', ru: 'Горное дело', uz: 'Kon-metallurgiya' },
     text: {
@@ -261,6 +265,7 @@ export const projects: Project[] = [
   {
     icon: 'flask',
     status: 'operating',
+    image: '/images/projects/navoiazot.jpg',
     title: { en: 'Navoiazot Chemical Complex', ru: 'Химкомплекс «Навоиазот»', uz: 'Navoiyazot kimyo majmuasi' },
     sector: { en: 'Chemical Industry', ru: 'Химия', uz: 'Kimyo' },
     text: {
@@ -272,6 +277,7 @@ export const projects: Project[] = [
   {
     icon: 'plane',
     status: 'operating',
+    image: '/images/projects/airport.jpg',
     title: { en: 'Navoi International Airport', ru: 'Международный аэропорт Навои', uz: 'Navoiy xalqaro aeroporti' },
     sector: { en: 'Logistics', ru: 'Логистика', uz: 'Logistika' },
     text: {
@@ -283,6 +289,7 @@ export const projects: Project[] = [
   {
     icon: 'sun',
     status: 'operating',
+    image: '/images/projects/solar.jpg',
     title: { en: 'Nur Navoi Solar & Wind', ru: 'Солнце и ветер «Нур Навои»', uz: 'Nur Navoiy quyosh va shamoli' },
     sector: { en: 'Green Energy', ru: 'Зелёная энергетика', uz: 'Yashil energetika' },
     text: {
@@ -294,6 +301,7 @@ export const projects: Project[] = [
   {
     icon: 'bolt',
     status: 'operating',
+    image: '/images/projects/tpp.jpg',
     title: { en: 'Navoi Thermal Power Plant', ru: 'Навоийская ТЭС', uz: 'Navoiy issiqlik elektr stansiyasi' },
     sector: { en: 'Energy', ru: 'Энергетика', uz: 'Energetika' },
     text: {
@@ -305,6 +313,7 @@ export const projects: Project[] = [
   {
     icon: 'shield',
     status: 'operating',
+    image: '/images/projects/fez.jpg',
     title: { en: 'Navoi Free Economic Zone', ru: 'СЭЗ «Навои»', uz: 'Navoiy erkin iqtisodiy zonasi' },
     sector: { en: 'Manufacturing', ru: 'Производство', uz: 'Ishlab chiqarish' },
     text: {

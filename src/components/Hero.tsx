@@ -10,10 +10,10 @@ export function Hero() {
   const { t, lang } = useLanguage()
 
   return (
-    <section id="top" className="relative overflow-hidden pt-[72px]">
+    <section id="top" className="relative overflow-hidden pt-[120px]">
       {/* Background layers */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-900 via-navy-950 to-navy-950" />
+        <div className="absolute inset-0 bg-gradient-to-b from-bgalt via-bg to-bg" />
         <div className="pattern-grid absolute inset-0 opacity-60" />
         <div className="absolute -right-32 top-10 h-[520px] w-[520px] rounded-full bg-gold-500/20 blur-[120px]" />
         <div className="absolute -left-40 bottom-0 h-[420px] w-[420px] rounded-full bg-teal-500/10 blur-[120px]" />
@@ -40,7 +40,7 @@ export function Hero() {
         </svg>
       </div>
 
-      <div className="container-wide grid items-center gap-14 py-16 md:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:py-28">
+      <div className="container-wide grid items-center gap-14 py-14 md:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
         {/* Left: message */}
         <div>
           <Reveal>
@@ -51,7 +51,7 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-heading sm:text-5xl lg:text-6xl">
               {t('hero.titleTop')}
               <br />
               <span className="text-gradient-gold">{t('hero.titleAccent')}</span>
@@ -61,7 +61,7 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={160}>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
               {t('hero.subtitle')}
             </p>
           </Reveal>
@@ -87,10 +87,10 @@ export function Hero() {
               key={i}
               className={`glass-card glass-card-hover p-5 sm:p-6 ${i % 2 === 0 ? 'sm:translate-y-3' : ''}`}
             >
-              <div className="font-display text-2xl font-extrabold text-gold-400 sm:text-3xl">
+              <div className="font-display text-2xl font-extrabold text-accenttext sm:text-3xl">
                 {stat.value}
               </div>
-              <div className="mt-2 text-xs leading-snug text-slate-300 sm:text-sm">
+              <div className="mt-2 text-xs leading-snug text-muted sm:text-sm">
                 {L(stat.label, lang)}
               </div>
             </div>

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -24,6 +25,17 @@ export default {
           500: '#20b8b0',
           600: '#159a93',
         },
+        // ── Semantic, theme-aware tokens (see :root / .dark in index.css) ──
+        bg: 'rgb(var(--c-bg) / <alpha-value>)',
+        bgalt: 'rgb(var(--c-bg-alt) / <alpha-value>)',
+        surface: 'rgb(var(--c-surface) / <alpha-value>)',
+        'surface-2': 'rgb(var(--c-surface-2) / <alpha-value>)',
+        line: 'rgb(var(--c-border) / <alpha-value>)',
+        heading: 'rgb(var(--c-heading) / <alpha-value>)',
+        body: 'rgb(var(--c-body) / <alpha-value>)',
+        muted: 'rgb(var(--c-muted) / <alpha-value>)',
+        subtle: 'rgb(var(--c-subtle) / <alpha-value>)',
+        accenttext: 'rgb(var(--c-accent-text) / <alpha-value>)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'sans-serif'],

@@ -9,7 +9,7 @@ export function FreeZone() {
   return (
     <section id="freezone" className="relative overflow-hidden py-20 md:py-28">
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-navy-900/60" />
+        <div className="absolute inset-0 bg-bgalt" />
         <div className="pattern-grid absolute inset-0 opacity-40" />
         <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-gold-500/10 blur-[120px]" />
       </div>
@@ -26,7 +26,7 @@ export function FreeZone() {
             <h2 className="section-title mt-4">{t('freezone.title')}</h2>
           </Reveal>
           <Reveal delay={120}>
-            <p className="mt-4 text-base leading-relaxed text-slate-300">{t('freezone.subtitle')}</p>
+            <p className="mt-4 text-base leading-relaxed text-muted">{t('freezone.subtitle')}</p>
           </Reveal>
           <Reveal delay={180}>
             <a href="#contact" className="btn-primary mt-8">
@@ -38,16 +38,16 @@ export function FreeZone() {
 
         <Reveal delay={120}>
           <div className="glass-card p-8">
-            <h3 className="mb-5 font-display text-lg font-bold text-white">
+            <h3 className="mb-5 font-display text-lg font-bold text-heading">
               {t('freezone.benefitsTitle')}
             </h3>
             <ul className="space-y-4">
               {freeZoneBenefits.map((benefit, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-gold-500/15 text-gold-400">
+                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-gold-500/15 text-accenttext">
                     <Icon name="check" size={14} strokeWidth={2.4} />
                   </span>
-                  <span className="text-sm leading-relaxed text-slate-300">{L(benefit, lang)}</span>
+                  <span className="text-sm leading-relaxed text-body">{L(benefit, lang)}</span>
                 </li>
               ))}
             </ul>

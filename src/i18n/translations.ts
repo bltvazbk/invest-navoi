@@ -21,6 +21,11 @@ export const translations: Record<Lang, Dict> = {
       name: 'Invest Navoi',
       region: 'Navoi Region · Uzbekistan',
     },
+    gov: {
+      hokimlik: 'Government of the Navoi Region',
+      department: 'Department of Investment, Industry and Trade',
+      republic: 'Republic of Uzbekistan',
+    },
     nav: {
       why: 'Why Navoi',
       sectors: 'Sectors',
@@ -143,6 +148,11 @@ export const translations: Record<Lang, Dict> = {
       name: 'Invest Navoi',
       region: 'Навоийская область · Узбекистан',
     },
+    gov: {
+      hokimlik: 'Хокимият Навоийской области',
+      department: 'Управление инвестиций, промышленности и торговли',
+      republic: 'Республика Узбекистан',
+    },
     nav: {
       why: 'Почему Навои',
       sectors: 'Отрасли',
@@ -264,6 +274,11 @@ export const translations: Record<Lang, Dict> = {
     brand: {
       name: 'Invest Navoi',
       region: "Navoiy viloyati · O'zbekiston",
+    },
+    gov: {
+      hokimlik: 'Navoiy viloyati hokimligi',
+      department: 'Investitsiyalar, sanoat va savdo boshqarmasi',
+      republic: 'O‘zbekiston Respublikasi',
     },
     nav: {
       why: 'Nega Navoiy',

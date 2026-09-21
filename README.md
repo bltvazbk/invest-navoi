@@ -56,6 +56,33 @@ UI labels (navigation, headings, buttons) live in
 [`src/i18n/translations.ts`](src/i18n/translations.ts). Any missing `ru`/`uz`
 string automatically falls back to English.
 
+## Features
+
+- **Trilingual** EN / RU / UZ with a language switcher (top-right).
+- **Dark / light theme** toggle (sun/moon button), remembered per visitor.
+- **Government branding**: the state emblem, the national flag (SVG) and the
+  official attribution — *Government of the Navoi Region · Department of
+  Investment, Industry and Trade* — in the header bar and footer.
+- **Project photos** with graceful gradient placeholders (see below).
+
+## Adding real photos
+
+Project cards look for photos in **`public/images/projects/`**. Drop in files
+with these exact names (landscape, ~1200×800px, `.jpg`) and they appear
+automatically; until then a themed placeholder with the sector icon is shown:
+
+```
+public/images/projects/nmmc.jpg        # Navoi Mining & Metallurgical Combinat
+public/images/projects/navoiazot.jpg   # Navoiazot Chemical Complex
+public/images/projects/airport.jpg     # Navoi International Airport
+public/images/projects/solar.jpg       # Nur Navoi Solar & Wind
+public/images/projects/tpp.jpg         # Navoi Thermal Power Plant
+public/images/projects/fez.jpg         # Navoi Free Economic Zone
+```
+
+The state emblem lives at `public/images/emblem.png` — replace it if you have a
+higher-resolution official version.
+
 ## Before you go live — update these
 
 - [ ] **Statistics** in `content.ts` (`stats`) — verify against official data.
@@ -64,6 +91,7 @@ string automatically falls back to English.
       (`CONTACTS`) — currently a placeholder `+998 79 000 00 00`.
 - [ ] **Address / working hours** in `translations.ts` (`contact.address`,
       `contact.hours`).
+- [ ] **Real project photos** in `public/images/projects/` (see above).
 - [ ] Optional: add a real **Investment Guide PDF** and link the hero's
       "Download Investment Guide" button to it.
 

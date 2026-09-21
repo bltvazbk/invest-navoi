@@ -21,17 +21,17 @@ export function LanguageSwitcher() {
     <div className="relative" ref={ref}>
       <button
         onClick={() => setOpen((o) => !o)}
-        className="flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10"
+        className="flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-2 text-sm font-medium text-heading transition hover:bg-surface"
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label="Change language"
       >
-        <Icon name="globe" size={16} className="text-gold-400" />
+        <Icon name="globe" size={16} className="text-accenttext" />
         {current.short}
         <Icon name="chevron-down" size={14} className={`transition ${open ? 'rotate-180' : ''}`} />
       </button>
       {open && (
-        <div className="absolute right-0 z-50 mt-2 w-36 overflow-hidden rounded-xl border border-white/10 bg-navy-800 shadow-2xl">
+        <div className="absolute right-0 z-50 mt-2 w-36 overflow-hidden rounded-xl border border-line bg-surface shadow-2xl">
           {LANGUAGES.map((l) => (
             <button
               key={l.code}
@@ -39,8 +39,8 @@ export function LanguageSwitcher() {
                 setLang(l.code)
                 setOpen(false)
               }}
-              className={`flex w-full items-center justify-between px-4 py-2.5 text-sm transition hover:bg-white/5 ${
-                l.code === lang ? 'text-gold-400' : 'text-slate-200'
+              className={`flex w-full items-center justify-between px-4 py-2.5 text-sm transition hover:bg-surface-2 ${
+                l.code === lang ? 'text-accenttext' : 'text-body'
               }`}
               role="option"
               aria-selected={l.code === lang}

@@ -38,12 +38,12 @@ export function Contact() {
   }
 
   const field =
-    'w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-gold-500/50 focus:bg-white/[0.07]'
+    'w-full rounded-xl border border-line bg-surface-2 px-4 py-3 text-sm text-heading placeholder:text-subtle outline-none transition focus:border-gold-500/60 focus:bg-surface'
 
   return (
     <section id="contact" className="relative overflow-hidden py-20 md:py-28">
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-navy-900/50" />
+        <div className="absolute inset-0 bg-bgalt" />
         <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-gold-500/10 blur-[130px]" />
       </div>
 
@@ -60,36 +60,36 @@ export function Contact() {
             <h2 className="section-title mt-4">{t('contact.title')}</h2>
           </Reveal>
           <Reveal delay={120}>
-            <p className="mt-4 max-w-md text-base leading-relaxed text-slate-300">
+            <p className="mt-4 max-w-md text-base leading-relaxed text-muted">
               {t('contact.subtitle')}
             </p>
           </Reveal>
 
           <Reveal delay={180}>
             <div className="mt-8 space-y-3">
-              <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-subtle">
                 {t('contact.directTitle')}
               </h3>
               {CONTACTS.map((c) => (
                 <a
                   key={c.icon}
                   href={c.href}
-                  className="flex items-center gap-3 text-slate-200 transition hover:text-gold-400"
+                  className="flex items-center gap-3 text-body transition hover:text-accenttext"
                 >
-                  <span className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5 text-gold-400">
+                  <span className="grid h-10 w-10 place-items-center rounded-xl border border-line bg-surface-2 text-accenttext">
                     <Icon name={c.icon} size={18} />
                   </span>
                   {c.label}
                 </a>
               ))}
-              <div className="flex items-center gap-3 text-slate-300">
-                <span className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5 text-gold-400">
+              <div className="flex items-center gap-3 text-body">
+                <span className="grid h-10 w-10 place-items-center rounded-xl border border-line bg-surface-2 text-accenttext">
                   <Icon name="map-pin" size={18} />
                 </span>
                 {t('contact.address')}
               </div>
-              <div className="flex items-center gap-3 text-slate-300">
-                <span className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5 text-gold-400">
+              <div className="flex items-center gap-3 text-body">
+                <span className="grid h-10 w-10 place-items-center rounded-xl border border-line bg-surface-2 text-accenttext">
                   <Icon name="clock" size={18} />
                 </span>
                 {t('contact.hours')}
@@ -103,10 +103,12 @@ export function Contact() {
           <div className="glass-card p-7 sm:p-9">
             {submitted ? (
               <div className="flex min-h-[420px] flex-col items-center justify-center text-center">
-                <span className="grid h-16 w-16 place-items-center rounded-full bg-teal-400/15 text-teal-400">
+                <span className="grid h-16 w-16 place-items-center rounded-full bg-teal-400/15 text-teal-500">
                   <Icon name="check" size={32} strokeWidth={2.2} />
                 </span>
-                <p className="mt-6 max-w-sm text-lg font-medium text-white">{t('contact.thanks')}</p>
+                <p className="mt-6 max-w-sm text-lg font-medium text-heading">
+                  {t('contact.thanks')}
+                </p>
               </div>
             ) : (
               <form
@@ -169,11 +171,11 @@ export function Contact() {
                   className={`${field} appearance-none`}
                   aria-label={t('contact.formSector')}
                 >
-                  <option value="" className="bg-navy-800">
+                  <option value="" className="bg-surface text-body">
                     {t('contact.formSector')}
                   </option>
                   {sectors.map((s) => (
-                    <option key={s.id} value={s.title.en} className="bg-navy-800">
+                    <option key={s.id} value={s.title.en} className="bg-surface text-body">
                       {L(s.title, lang)}
                     </option>
                   ))}
@@ -195,7 +197,7 @@ export function Contact() {
                   <Icon name="arrow-right" size={16} />
                 </button>
 
-                <p className="text-xs leading-relaxed text-slate-500">{t('contact.formNote')}</p>
+                <p className="text-xs leading-relaxed text-subtle">{t('contact.formNote')}</p>
               </form>
             )}
           </div>

@@ -20,11 +20,11 @@ export function WhyNavoi() {
           {advantages.map((adv, i) => (
             <Reveal key={i} delay={(i % 3) * 80}>
               <div className="glass-card glass-card-hover h-full p-7">
-                <span className="mb-5 inline-grid h-12 w-12 place-items-center rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-400">
+                <span className="mb-5 inline-grid h-12 w-12 place-items-center rounded-xl border border-gold-500/30 bg-gold-500/10 text-accenttext">
                   <Icon name={adv.icon} size={24} />
                 </span>
-                <h3 className="font-display text-lg font-bold text-white">{L(adv.title, lang)}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-400">{L(adv.text, lang)}</p>
+                <h3 className="font-display text-lg font-bold text-heading">{L(adv.title, lang)}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{L(adv.text, lang)}</p>
               </div>
             </Reveal>
           ))}

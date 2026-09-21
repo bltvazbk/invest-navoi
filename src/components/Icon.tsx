@@ -113,6 +113,13 @@ const paths: Record<string, ReactNode> = {
   'arrow-right': <path d="M5 12h14M13 6l6 6-6 6" />,
   download: <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />,
   'chevron-down': <path d="m6 9 6 6 6-6" />,
+  moon: <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" />,
+  building: (
+    <>
+      <path d="M3 21h18M5 21V6l7-3 7 3v15" />
+      <path d="M9 9h.01M12 9h.01M15 9h.01M9 13h.01M12 13h.01M15 13h.01M10.5 21v-4h3v4" />
+    </>
+  ),
   menu: <path d="M4 6h16M4 12h16M4 18h16" />,
   close: <path d="M6 6l12 12M18 6 6 18" />,
   quote: (
