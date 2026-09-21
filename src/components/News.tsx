@@ -46,7 +46,12 @@ export function News() {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {news.map((item, i) => (
             <Reveal key={i} delay={(i % 3) * 80}>
-              <article className="glass-card glass-card-hover group flex h-full flex-col overflow-hidden">
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card glass-card-hover group flex h-full flex-col overflow-hidden"
+              >
                 <div className="relative h-48 overflow-hidden border-b border-line">
                   <img
                     src={item.image}
@@ -74,7 +79,7 @@ export function News() {
                     <Icon name="arrow-right" size={14} />
                   </span>
                 </div>
-              </article>
+              </a>
             </Reveal>
           ))}
         </div>

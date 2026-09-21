@@ -24,6 +24,8 @@ export const LINKS = {
   govPortal: 'https://gov.uz/oz/navoi',
   map: 'https://niim.vercel.app',
   trustPhone: '+998 79 220 10 20',
+  deptPhone: '+998 79 229 62 23',
+  specialistPhone: '+998 99 079 32 53',
 }
 
 export type ProjectStatus = 'operating' | 'construction' | 'planned'
@@ -620,59 +622,63 @@ export const services: Service[] = [
   },
 ]
 
-// ── News (sample entries — replace with real news before launch) ──
+// ── News — real items sourced from spot.uz / gazeta.uz ──────
 export interface NewsItem {
   date: string
   image: string
   tag: Localized
   title: Localized
   excerpt: Localized
+  link: string
 }
 
 export const news: NewsItem[] = [
   {
-    date: '2026-08-20',
+    date: '2026-02-11',
     image: '/images/news/news1.jpg',
+    link: 'https://www.spot.uz/oz/2026/02/11/navoi-cooperation',
     tag: { en: 'Investment', ru: 'Инвестиции', uz: 'Investitsiya' },
     title: {
-      en: 'New investment agreements signed for the Navoi Free Economic Zone',
-      ru: 'Подписаны новые инвестиционные соглашения по СЭЗ «Навои»',
-      uz: 'Navoiy EIZ bo‘yicha yangi investitsiya kelishuvlari imzolandi',
+      en: 'Navoi to attract $4.2 billion in investment in 2026',
+      ru: 'В 2026 году Навои привлечёт $4,2 млрд инвестиций',
+      uz: 'Navoiyga 2026-yilda 4,2 mlrd dollar investitsiya jalb etiladi',
     },
     excerpt: {
-      en: 'Foreign and domestic investors signed agreements to launch new export-oriented production facilities in the region.',
-      ru: 'Иностранные и местные инвесторы подписали соглашения о запуске новых экспортных производств в регионе.',
-      uz: 'Xorijiy va mahalliy investorlar viloyatda yangi eksport ishlab chiqarishlarini boshlash bo‘yicha kelishuvlar imzoladi.',
+      en: 'The region aims to attract $4.2 billion in foreign investment and lift exports to $1.5 billion in 2026.',
+      ru: 'Регион намерен привлечь $4,2 млрд иностранных инвестиций и довести экспорт до $1,5 млрд в 2026 году.',
+      uz: 'Viloyat 2026-yilda 4,2 mlrd dollar xorijiy investitsiya jalb qilib, eksportni 1,5 mlrd dollarga yetkazishni maqsad qilgan.',
     },
   },
   {
-    date: '2026-08-05',
+    date: '2026-02-12',
     image: '/images/news/news2.jpg',
+    link: 'https://www.gazeta.uz/oz/2026/02/12/navoi/',
     tag: { en: 'Industry', ru: 'Промышленность', uz: 'Sanoat' },
     title: {
-      en: 'Textile cluster expands capacity with new spinning lines',
-      ru: 'Текстильный кластер расширяет мощности новыми прядильными линиями',
-      uz: 'To‘qimachilik klasteri yangi yigiruv liniyalari bilan quvvatini oshirmoqda',
+      en: 'Granite industrial park and stone processing to be set up in Nurata',
+      ru: 'В Нуратинском районе создадут гранитный индустриальный парк',
+      uz: 'Nurota tumanida granit sanoat parki va tosh qayta ishlash tashkil etiladi',
     },
     excerpt: {
-      en: 'A vertically integrated cotton-to-yarn facility increased output and created hundreds of new jobs.',
-      ru: 'Вертикально интегрированное производство «хлопок — пряжа» нарастило выпуск и создало сотни рабочих мест.',
-      uz: '«Paxtadan ipgacha» vertikal integratsiyalashgan korxona ishlab chiqarishni oshirdi va yuzlab ish o‘rni yaratdi.',
+      en: 'A decorative-stone cluster and a polished-stone market will be built on a 50-hectare site.',
+      ru: 'На участке в 50 га построят кластер декоративного камня и рынок полированного камня.',
+      uz: '50 gektar maydonda dekorativ toshlarni qayta ishlash klasteri va sayqallangan tosh bozori barpo etiladi.',
     },
   },
   {
-    date: '2026-07-18',
+    date: '2026-02-02',
     image: '/images/news/news3.jpg',
-    tag: { en: 'Energy', ru: 'Энергетика', uz: 'Energetika' },
+    link: 'https://www.gazeta.uz/oz/2026/02/02/dangerous-waste/',
+    tag: { en: 'Ecology', ru: 'Экология', uz: 'Ekologiya' },
     title: {
-      en: 'Construction begins on new renewable-energy capacity',
-      ru: 'Начато строительство новых мощностей возобновляемой энергетики',
-      uz: 'Yangi qayta tiklanuvchi energiya quvvatlari qurilishi boshlandi',
+      en: 'A $265M hazardous-waste recycling complex to be built in Navoi',
+      ru: 'В Навои построят комплекс переработки опасных отходов за $265 млн',
+      uz: 'Navoiyda 265 mln dollarlik xavfli chiqindilarni qayta ishlash majmuasi quriladi',
     },
     excerpt: {
-      en: 'Ground was broken on new solar and wind projects that will feed clean power into the regional grid.',
-      ru: 'Стартовали новые солнечные и ветровые проекты, которые обеспечат чистую энергию для сети региона.',
-      uz: 'Mintaqa tarmog‘iga toza energiya beradigan yangi quyosh va shamol loyihalari boshlandi.',
+      en: 'The project will be implemented in three phases between 2026 and 2046.',
+      ru: 'Проект будет реализован в три этапа в 2026–2046 годах.',
+      uz: 'Loyiha 2026–2046-yillarda uch bosqichda amalga oshiriladi.',
     },
   },
 ]

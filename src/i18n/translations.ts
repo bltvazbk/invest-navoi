@@ -124,7 +124,8 @@ export const translations: Record<Lang, Dict> = {
       formNote:
         'By sending this form you agree to be contacted by the Navoi investment team regarding your enquiry.',
       directTitle: 'Direct contacts',
-      address: 'Navoi city, Navoi Region, Republic of Uzbekistan',
+      specialistRole: 'Investment Specialist',
+      address: '77A, Islam Karimov Street, Navoi city, Navoi Region',
       hours: 'Mon–Fri, 09:00–18:00 (GMT+5)',
       thanks: 'Thank you! Your enquiry has been noted. Our team will be in touch shortly.',
     },
@@ -289,7 +290,8 @@ export const translations: Record<Lang, Dict> = {
       formNote:
         'Отправляя форму, вы соглашаетесь на связь с инвестиционной командой Навои по вашему запросу.',
       directTitle: 'Прямые контакты',
-      address: 'г. Навои, Навоийская область, Республика Узбекистан',
+      specialistRole: 'Специалист по инвестициям',
+      address: 'ул. Ислама Каримова, 77А, г. Навои, Навоийская область',
       hours: 'Пн–Пт, 09:00–18:00 (GMT+5)',
       thanks: 'Спасибо! Ваш запрос принят. Наша команда скоро свяжется с вами.',
     },
@@ -453,7 +455,8 @@ export const translations: Record<Lang, Dict> = {
       formNote:
         'Ushbu shaklni yuborish orqali siz murojaatingiz yuzasidan Navoiy investitsiya jamoasi bilan bog‘lanishga rozilik bildirasiz.',
       directTitle: 'To‘g‘ridan-to‘g‘ri aloqa',
-      address: 'Navoiy shahri, Navoiy viloyati, O‘zbekiston Respublikasi',
+      specialistRole: 'Investitsiya bo‘yicha mutaxassis',
+      address: 'Islom Karimov ko‘chasi, 77A, Navoiy shahri, Navoiy viloyati',
       hours: 'Dush–Jum, 09:00–18:00 (GMT+5)',
       thanks: 'Rahmat! Murojaatingiz qabul qilindi. Jamoamiz tez orada bog‘lanadi.',
     },

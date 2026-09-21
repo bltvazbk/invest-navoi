@@ -27,11 +27,11 @@ export function GovBar() {
 
       <div className="flex items-center gap-4 sm:gap-5">
         <a
-          href={`tel:${LINKS.trustPhone.replace(/\s/g, '')}`}
+          href={`tel:${LINKS.deptPhone.replace(/\s/g, '')}`}
           className="hidden items-center gap-1.5 text-[11px] font-medium text-muted transition hover:text-accenttext md:flex"
         >
           <Icon name="phone" size={13} className="text-accenttext" />
-          {LINKS.trustPhone} (1066)
+          {LINKS.deptPhone}
         </a>
         <div className="hidden h-6 w-px bg-line sm:block" />
         <div className="flex items-center gap-2">
