@@ -3,6 +3,10 @@
   command = "npm run build"
   publish = "dist"
 
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
 # Single-page app: send all routes to index.html so client-side
 # anchor navigation works even on direct hits / refreshes.
 [[redirects]]

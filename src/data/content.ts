@@ -555,3 +555,124 @@ export const leadership: Leader[] = [
     },
   },
 ]
+
+// ── Government services (Davlat xizmatlari) ──────────────────
+export interface Service {
+  icon: string
+  title: Localized
+  text: Localized
+}
+
+export const services: Service[] = [
+  {
+    icon: 'shield',
+    title: { en: 'Investment agreements', ru: 'Инвестиционные соглашения', uz: 'Investitsiya shartnomalari' },
+    text: {
+      en: 'Preparation and signing of investment agreements with clear mutual commitments.',
+      ru: 'Подготовка и подписание инвестиционных соглашений с чёткими обязательствами.',
+      uz: 'Aniq o‘zaro majburiyatli investitsiya shartnomalarini tayyorlash va imzolash.',
+    },
+  },
+  {
+    icon: 'map-pin',
+    title: { en: 'Land allocation', ru: 'Выделение земли', uz: 'Yer ajratish' },
+    text: {
+      en: 'Selection and allocation of ready plots with utilities and access roads.',
+      ru: 'Подбор и выделение готовых участков с коммуникациями и подъездами.',
+      uz: 'Kommunikatsiya va yo‘llarga ega tayyor uchastkalarni tanlash va ajratish.',
+    },
+  },
+  {
+    icon: 'check',
+    title: { en: 'Permits & licences', ru: 'Разрешения и лицензии', uz: 'Ruxsat va litsenziyalar' },
+    text: {
+      en: 'Single-window support for construction, environmental and sector permits.',
+      ru: 'Сопровождение по строительным, экологическим и отраслевым разрешениям.',
+      uz: 'Qurilish, ekologik va tarmoq ruxsatnomalari bo‘yicha yagona darcha yordami.',
+    },
+  },
+  {
+    icon: 'bank',
+    title: { en: 'Incentives & subsidies', ru: 'Льготы и субсидии', uz: 'Imtiyoz va subsidiyalar' },
+    text: {
+      en: 'Applications for tax holidays, customs privileges and sector subsidies.',
+      ru: 'Оформление налоговых каникул, таможенных льгот и отраслевых субсидий.',
+      uz: 'Soliq ta’tili, bojxona imtiyozlari va tarmoq subsidiyalarini rasmiylashtirish.',
+    },
+  },
+  {
+    icon: 'building',
+    title: { en: 'Company registration', ru: 'Регистрация компании', uz: 'Kompaniya ro‘yxati' },
+    text: {
+      en: 'Fast company registration and residency in the Free Economic Zone.',
+      ru: 'Быстрая регистрация компании и получение статуса резидента СЭЗ.',
+      uz: 'Kompaniyani tez ro‘yxatdan o‘tkazish va EIZ rezidentligini rasmiylashtirish.',
+    },
+  },
+  {
+    icon: 'bolt',
+    title: { en: 'Utility connections', ru: 'Подключение к сетям', uz: 'Tarmoqlarga ulanish' },
+    text: {
+      en: 'Connection to power, gas, water and telecoms, with state co-financing.',
+      ru: 'Подключение к электро-, газо-, водо- и телеком-сетям при софинансировании.',
+      uz: 'Elektr, gaz, suv va aloqa tarmoqlariga davlat hammoliyasi bilan ulanish.',
+    },
+  },
+]
+
+// ── News (sample entries — replace with real news before launch) ──
+export interface NewsItem {
+  date: string
+  image: string
+  tag: Localized
+  title: Localized
+  excerpt: Localized
+}
+
+export const news: NewsItem[] = [
+  {
+    date: '2026-08-20',
+    image: '/images/news/news1.jpg',
+    tag: { en: 'Investment', ru: 'Инвестиции', uz: 'Investitsiya' },
+    title: {
+      en: 'New investment agreements signed for the Navoi Free Economic Zone',
+      ru: 'Подписаны новые инвестиционные соглашения по СЭЗ «Навои»',
+      uz: 'Navoiy EIZ bo‘yicha yangi investitsiya kelishuvlari imzolandi',
+    },
+    excerpt: {
+      en: 'Foreign and domestic investors signed agreements to launch new export-oriented production facilities in the region.',
+      ru: 'Иностранные и местные инвесторы подписали соглашения о запуске новых экспортных производств в регионе.',
+      uz: 'Xorijiy va mahalliy investorlar viloyatda yangi eksport ishlab chiqarishlarini boshlash bo‘yicha kelishuvlar imzoladi.',
+    },
+  },
+  {
+    date: '2026-08-05',
+    image: '/images/news/news2.jpg',
+    tag: { en: 'Industry', ru: 'Промышленность', uz: 'Sanoat' },
+    title: {
+      en: 'Textile cluster expands capacity with new spinning lines',
+      ru: 'Текстильный кластер расширяет мощности новыми прядильными линиями',
+      uz: 'To‘qimachilik klasteri yangi yigiruv liniyalari bilan quvvatini oshirmoqda',
+    },
+    excerpt: {
+      en: 'A vertically integrated cotton-to-yarn facility increased output and created hundreds of new jobs.',
+      ru: 'Вертикально интегрированное производство «хлопок — пряжа» нарастило выпуск и создало сотни рабочих мест.',
+      uz: '«Paxtadan ipgacha» vertikal integratsiyalashgan korxona ishlab chiqarishni oshirdi va yuzlab ish o‘rni yaratdi.',
+    },
+  },
+  {
+    date: '2026-07-18',
+    image: '/images/news/news3.jpg',
+    tag: { en: 'Energy', ru: 'Энергетика', uz: 'Energetika' },
+    title: {
+      en: 'Construction begins on new renewable-energy capacity',
+      ru: 'Начато строительство новых мощностей возобновляемой энергетики',
+      uz: 'Yangi qayta tiklanuvchi energiya quvvatlari qurilishi boshlandi',
+    },
+    excerpt: {
+      en: 'Ground was broken on new solar and wind projects that will feed clean power into the regional grid.',
+      ru: 'Стартовали новые солнечные и ветровые проекты, которые обеспечат чистую энергию для сети региона.',
+      uz: 'Mintaqa tarmog‘iga toza energiya beradigan yangi quyosh va shamol loyihalari boshlandi.',
+    },
+  },
+]

@@ -26,7 +26,7 @@ export function Footer() {
         <div className="mb-12 flex flex-col gap-6 rounded-2xl border border-line bg-surface/60 p-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">
             <img
-              src="/images/emblem.png"
+              src="/images/emblem.svg"
               alt={t('gov.republic')}
               className="h-14 w-auto shrink-0"
               width={53}

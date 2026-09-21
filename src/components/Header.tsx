@@ -8,11 +8,11 @@ import { ThemeToggle } from './ThemeToggle'
 
 const NAV = [
   { id: 'government', key: 'nav.government' },
-  { id: 'why', key: 'nav.why' },
   { id: 'sectors', key: 'nav.sectors' },
   { id: 'projects', key: 'nav.projects' },
+  { id: 'services', key: 'nav.services' },
   { id: 'map', key: 'nav.map' },
-  { id: 'incentives', key: 'nav.incentives' },
+  { id: 'news', key: 'nav.news' },
 ] as const
 
 export function Header() {

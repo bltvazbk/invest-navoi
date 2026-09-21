@@ -8,8 +8,10 @@ import { Projects } from './components/Projects'
 import { InteractiveMap } from './components/InteractiveMap'
 import { FreeZone } from './components/FreeZone'
 import { Incentives } from './components/Incentives'
+import { Services } from './components/Services'
 import { Process } from './components/Process'
 import { Opportunities } from './components/Opportunities'
+import { News } from './components/News'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
 import { BackToTop } from './components/BackToTop'
@@ -28,8 +30,10 @@ export default function App() {
         <InteractiveMap />
         <FreeZone />
         <Incentives />
+        <Services />
         <Process />
         <Opportunities />
+        <News />
         <Contact />
       </main>
       <Footer />

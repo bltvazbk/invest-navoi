@@ -36,6 +36,8 @@ export const translations: Record<Lang, Dict> = {
       contact: 'Contact',
       map: 'Map',
       government: 'Government',
+      services: 'Services',
+      news: 'News',
       investNow: 'Invest Now',
     },
     hero: {
@@ -115,6 +117,7 @@ export const translations: Record<Lang, Dict> = {
       formCompany: 'Company',
       formEmail: 'Email',
       formCountry: 'Country',
+      formPhone: 'Phone',
       formSector: 'Sector of interest',
       formMessage: 'Tell us about your project',
       formSubmit: 'Send enquiry',
@@ -137,6 +140,18 @@ export const translations: Record<Lang, Dict> = {
       rights: 'All rights reserved.',
       disclaimer:
         'This is an informational portal. Figures are indicative and should be verified with official sources before making investment decisions.',
+    },
+    services: {
+      eyebrow: 'One-Stop-Shop',
+      title: 'Government services for investors',
+      subtitle:
+        'Everything is handled through a single window — from the first agreement to utility connections.',
+    },
+    news: {
+      eyebrow: 'Newsroom',
+      title: 'News & updates',
+      subtitle: 'The latest investment, industry and development news from the Navoi region.',
+      all: 'All news',
     },
     map: {
       eyebrow: 'Interactive Map',
@@ -186,6 +201,8 @@ export const translations: Record<Lang, Dict> = {
       contact: 'Контакты',
       map: 'Карта',
       government: 'Хокимият',
+      services: 'Услуги',
+      news: 'Новости',
       investNow: 'Инвестировать',
     },
     hero: {
@@ -265,6 +282,7 @@ export const translations: Record<Lang, Dict> = {
       formCompany: 'Компания',
       formEmail: 'Эл. почта',
       formCountry: 'Страна',
+      formPhone: 'Телефон',
       formSector: 'Интересующая отрасль',
       formMessage: 'Расскажите о вашем проекте',
       formSubmit: 'Отправить запрос',
@@ -287,6 +305,17 @@ export const translations: Record<Lang, Dict> = {
       rights: 'Все права защищены.',
       disclaimer:
         'Это информационный портал. Данные являются ориентировочными; перед принятием решений сверяйтесь с официальными источниками.',
+    },
+    services: {
+      eyebrow: 'Единое окно',
+      title: 'Государственные услуги для инвесторов',
+      subtitle: 'Всё оформляется через единое окно — от первого соглашения до подключения к сетям.',
+    },
+    news: {
+      eyebrow: 'Пресс-центр',
+      title: 'Новости и события',
+      subtitle: 'Последние новости об инвестициях, промышленности и развитии Навоийской области.',
+      all: 'Все новости',
     },
     map: {
       eyebrow: 'Интерактивная карта',
@@ -336,6 +365,8 @@ export const translations: Record<Lang, Dict> = {
       contact: 'Aloqa',
       map: 'Xarita',
       government: 'Hokimiyat',
+      services: 'Xizmatlar',
+      news: 'Yangiliklar',
       investNow: 'Investitsiya qilish',
     },
     hero: {
@@ -415,6 +446,7 @@ export const translations: Record<Lang, Dict> = {
       formCompany: 'Kompaniya',
       formEmail: 'Email',
       formCountry: 'Davlat',
+      formPhone: 'Telefon',
       formSector: 'Qiziqish tarmog‘i',
       formMessage: 'Loyihangiz haqida yozing',
       formSubmit: 'Murojaat yuborish',
@@ -437,6 +469,17 @@ export const translations: Record<Lang, Dict> = {
       rights: 'Barcha huquqlar himoyalangan.',
       disclaimer:
         'Bu axborot portali. Ko‘rsatkichlar taxminiy; qaror qabul qilishdan oldin rasmiy manbalarga solishtiring.',
+    },
+    services: {
+      eyebrow: 'Yagona darcha',
+      title: 'Investorlar uchun davlat xizmatlari',
+      subtitle: 'Hammasi yagona darcha orqali — birinchi shartnomadan tarmoqlarga ulanishgacha.',
+    },
+    news: {
+      eyebrow: 'Matbuot markazi',
+      title: 'Yangiliklar va yangilanishlar',
+      subtitle: 'Navoiy viloyatining investitsiya, sanoat va rivojlanish yangiliklari.',
+      all: 'Barcha yangiliklar',
     },
     map: {
       eyebrow: 'Interaktiv xarita',

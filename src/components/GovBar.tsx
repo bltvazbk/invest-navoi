@@ -11,7 +11,7 @@ export function GovBar() {
     <div className="flex items-center justify-between gap-3 py-2.5">
       <a href="#government" className="group flex items-center gap-3">
         <img
-          src="/images/emblem.png"
+          src="/images/emblem.svg"
           alt={t('gov.republic')}
           className="h-10 w-auto shrink-0"
           width={38}

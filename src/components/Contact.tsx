@@ -10,7 +10,7 @@ const encode = (data: Record<string, string>) =>
     .map((k) => encodeURIComponent(k) + '=' + encodeURIComponent(data[k]))
     .join('&')
 
-const EMPTY = { name: '', company: '', email: '', country: '', sector: '', message: '' }
+const EMPTY = { name: '', company: '', email: '', phone: '', country: '', sector: '', message: '' }
 
 // NOTE: replace the phone number with the real One-Gateway line before launch.
 const CONTACTS = [
@@ -28,7 +28,13 @@ export function Contact() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Post to Netlify Forms. Silently ignored in local dev (no handler).
+    // 1) Notify via Telegram — the bot token stays secret in the serverless function.
+    fetch('/.netlify/functions/submit-enquiry', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    }).catch(() => {})
+    // 2) Also keep a record in Netlify Forms (ignored in local dev).
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -155,6 +161,16 @@ export function Contact() {
                     aria-label={t('contact.formEmail')}
                   />
                   <input
+                    name="phone"
+                    type="tel"
+                    value={form.phone}
+                    onChange={update}
+                    required
+                    placeholder={t('contact.formPhone')}
+                    className={field}
+                    aria-label={t('contact.formPhone')}
+                  />
+                  <input
                     name="country"
                     value={form.country}
                     onChange={update}
@@ -162,24 +178,23 @@ export function Contact() {
                     className={field}
                     aria-label={t('contact.formCountry')}
                   />
-                </div>
-
-                <select
-                  name="sector"
-                  value={form.sector}
-                  onChange={update}
-                  className={`${field} appearance-none`}
-                  aria-label={t('contact.formSector')}
-                >
-                  <option value="" className="bg-surface text-body">
-                    {t('contact.formSector')}
-                  </option>
-                  {sectors.map((s) => (
-                    <option key={s.id} value={s.title.en} className="bg-surface text-body">
-                      {L(s.title, lang)}
+                  <select
+                    name="sector"
+                    value={form.sector}
+                    onChange={update}
+                    className={`${field} appearance-none`}
+                    aria-label={t('contact.formSector')}
+                  >
+                    <option value="" className="bg-surface text-body">
+                      {t('contact.formSector')}
                     </option>
-                  ))}
-                </select>
+                    {sectors.map((s) => (
+                      <option key={s.id} value={s.title.en} className="bg-surface text-body">
+                        {L(s.title, lang)}
+                      </option>
+                    ))}
+                  </select>
+                </div>
 
                 <textarea
                   name="message"

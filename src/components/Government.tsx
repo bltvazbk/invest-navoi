@@ -69,7 +69,7 @@ export function Government() {
             <div className="glass-card h-full p-8">
               <div className="flex items-center gap-4">
                 <img
-                  src="/images/emblem.png"
+                  src="/images/emblem.svg"
                   alt={t('gov.republic')}
                   className="h-16 w-auto shrink-0"
                   width={60}
