@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a1122" />
+    <title>Invest Navoi — The Industrial Heart of New Uzbekistan</title>
+    <meta
+      name="description"
+      content="One-gateway investment portal for the Navoi region of Uzbekistan. Explore priority sectors, major projects, the Navoi Free Economic Zone, incentives and subsidies, and start your investment in one place."
+    />
+    <meta property="og:title" content="Invest Navoi — The Industrial Heart of New Uzbekistan" />
+    <meta
+      property="og:description"
+      content="Discover Navoi's investment potential: mining & metallurgy, chemicals, green energy, logistics, and more — all through one gateway."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--
+      Hidden static form so Netlify's build bot can detect and register the
+      "investment-enquiry" form. The live form is rendered by React and posts
+      to this same form name. See src/components/Contact.tsx.
+    -->
+    <form name="investment-enquiry" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="text" name="company" />
+      <input type="email" name="email" />
+      <input type="text" name="country" />
+      <input type="text" name="sector" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
