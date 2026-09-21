@@ -4,7 +4,7 @@ import { Icon } from './Icon'
 import { Reveal } from './Reveal'
 
 // Four headline cards drawn from the shared stats data.
-const HERO_CARDS = [stats[2], stats[3], stats[0], stats[1]]
+const HERO_CARDS = [stats[5], stats[3], stats[0], stats[1]]
 
 export function Hero() {
   const { t, lang } = useLanguage()

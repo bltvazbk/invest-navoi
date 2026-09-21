@@ -1,11 +1,15 @@
 import { useLanguage } from '../i18n/LanguageContext'
+import { LINKS } from '../data/content'
+import { Icon } from './Icon'
 import { Logo } from './Logo'
 import { UzFlag } from './UzFlag'
 
 const EXPLORE = [
+  { id: 'government', key: 'nav.government' },
   { id: 'why', key: 'nav.why' },
   { id: 'sectors', key: 'nav.sectors' },
   { id: 'projects', key: 'nav.projects' },
+  { id: 'map', key: 'nav.map' },
   { id: 'freezone', key: 'nav.freezone' },
   { id: 'incentives', key: 'nav.incentives' },
   { id: 'process', key: 'nav.process' },
@@ -39,7 +43,7 @@ export function Footer() {
           <UzFlag className="h-9 w-auto rounded ring-1 ring-line" />
         </div>
 
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
           <div className="max-w-sm lg:col-span-2">
             <Logo />
             <p className="mt-4 text-sm leading-relaxed text-muted">{t('footer.about')}</p>
@@ -62,6 +66,34 @@ export function Footer() {
           </div>
 
           <div>
+            <h4 className="text-sm font-semibold text-heading">{t('footer.resources')}</h4>
+            <ul className="mt-4 space-y-2.5">
+              <li>
+                <a
+                  href={LINKS.govPortal}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm text-muted transition hover:text-accenttext"
+                >
+                  {t('government.official')}
+                  <Icon name="arrow-right" size={13} />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={LINKS.map}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm text-muted transition hover:text-accenttext"
+                >
+                  {t('nav.map')} · NIIM
+                  <Icon name="arrow-right" size={13} />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
             <h4 className="text-sm font-semibold text-heading">{t('footer.contact')}</h4>
             <ul className="mt-4 space-y-2.5 text-sm text-muted">
               <li>
@@ -69,8 +101,15 @@ export function Footer() {
                   info@investnavoi.com
                 </a>
               </li>
+              <li>
+                <a
+                  href={`tel:${LINKS.trustPhone.replace(/\s/g, '')}`}
+                  className="transition hover:text-accenttext"
+                >
+                  {LINKS.trustPhone} (1066)
+                </a>
+              </li>
               <li>{t('contact.address')}</li>
-              <li>{t('contact.hours')}</li>
             </ul>
           </div>
         </div>

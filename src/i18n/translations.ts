@@ -34,6 +34,8 @@ export const translations: Record<Lang, Dict> = {
       incentives: 'Incentives',
       process: 'How to Invest',
       contact: 'Contact',
+      map: 'Map',
+      government: 'Government',
       investNow: 'Invest Now',
     },
     hero: {
@@ -136,6 +138,27 @@ export const translations: Record<Lang, Dict> = {
       disclaimer:
         'This is an informational portal. Figures are indicative and should be verified with official sources before making investment decisions.',
     },
+    map: {
+      eyebrow: 'Interactive Map',
+      title: 'Explore Navoi on the live investment map',
+      subtitle:
+        'NIIM — the Navoi Investment Intelligence Map. Browse available land, investment plots, subsoil deposits, infrastructure and all 11 districts in 2D and 3D.',
+      open: 'Open the full map',
+      hint: 'Powered by NIIM',
+    },
+    government: {
+      eyebrow: 'Government · One Gateway',
+      title: 'The Government of the Navoi Region',
+      subtitle:
+        'The Department of Investment, Industry and Trade is your official partner — a single point of contact for investing in the Navoi region.',
+      aboutTitle: 'About the Department',
+      aboutText:
+        'The Department of Investment, Industry and Trade of the Government (Hokimlik) of the Navoi Region coordinates investment attraction, industrial development and trade across the region, guiding investors from first enquiry to launch under the One Gateway principle.',
+      official: 'Official portal',
+      leadershipTitle: 'Leadership',
+      trustLine: 'Trust line',
+      namePlaceholder: 'Full name',
+    },
     common: {
       learnMore: 'Learn more',
       readMore: 'Read more',
@@ -161,6 +184,8 @@ export const translations: Record<Lang, Dict> = {
       incentives: 'Льготы',
       process: 'Как инвестировать',
       contact: 'Контакты',
+      map: 'Карта',
+      government: 'Хокимият',
       investNow: 'Инвестировать',
     },
     hero: {
@@ -263,6 +288,27 @@ export const translations: Record<Lang, Dict> = {
       disclaimer:
         'Это информационный портал. Данные являются ориентировочными; перед принятием решений сверяйтесь с официальными источниками.',
     },
+    map: {
+      eyebrow: 'Интерактивная карта',
+      title: 'Изучите Навои на живой инвестиционной карте',
+      subtitle:
+        'NIIM — инвестиционная интеллект-карта Навои. Свободные земли, инвестплощадки, недра, инфраструктура и все 11 районов в 2D и 3D.',
+      open: 'Открыть полную карту',
+      hint: 'На основе NIIM',
+    },
+    government: {
+      eyebrow: 'Правительство · Единое окно',
+      title: 'Хокимият Навоийской области',
+      subtitle:
+        'Управление инвестиций, промышленности и торговли — ваш официальный партнёр и единая точка контакта для инвестиций в Навоийскую область.',
+      aboutTitle: 'Об управлении',
+      aboutText:
+        'Управление инвестиций, промышленности и торговли хокимията Навоийской области координирует привлечение инвестиций, промышленное развитие и торговлю в регионе, сопровождая инвесторов от заявки до запуска по принципу «единого окна».',
+      official: 'Официальный портал',
+      leadershipTitle: 'Руководство',
+      trustLine: 'Телефон доверия',
+      namePlaceholder: 'Ф.И.О.',
+    },
     common: {
       learnMore: 'Подробнее',
       readMore: 'Читать далее',
@@ -288,6 +334,8 @@ export const translations: Record<Lang, Dict> = {
       incentives: 'Imtiyozlar',
       process: 'Qanday investitsiya qilish',
       contact: 'Aloqa',
+      map: 'Xarita',
+      government: 'Hokimiyat',
       investNow: 'Investitsiya qilish',
     },
     hero: {
@@ -389,6 +437,27 @@ export const translations: Record<Lang, Dict> = {
       rights: 'Barcha huquqlar himoyalangan.',
       disclaimer:
         'Bu axborot portali. Ko‘rsatkichlar taxminiy; qaror qabul qilishdan oldin rasmiy manbalarga solishtiring.',
+    },
+    map: {
+      eyebrow: 'Interaktiv xarita',
+      title: 'Navoiyni jonli investitsiya xaritasida o‘rganing',
+      subtitle:
+        'NIIM — Navoiy investitsiya intellekt xaritasi. Bo‘sh yerlar, investitsiya maydonlari, yer osti konlari, infratuzilma va barcha 11 tuman 2D va 3D ko‘rinishda.',
+      open: 'To‘liq xaritani ochish',
+      hint: 'NIIM asosida',
+    },
+    government: {
+      eyebrow: 'Hukumat · Yagona darvoza',
+      title: 'Navoiy viloyati hokimligi',
+      subtitle:
+        'Investitsiyalar, sanoat va savdo boshqarmasi — Navoiy viloyatiga investitsiya kiritish uchun rasmiy hamkoringiz va yagona aloqa nuqtangiz.',
+      aboutTitle: 'Boshqarma haqida',
+      aboutText:
+        'Navoiy viloyati hokimligining Investitsiyalar, sanoat va savdo boshqarmasi viloyatda investitsiya jalb etish, sanoat rivoji va savdoni muvofiqlashtiradi hamda investorlarni yagona darvoza tamoyili asosida murojaatdan ishga tushirishgacha kuzatib boradi.',
+      official: 'Rasmiy portal',
+      leadershipTitle: 'Rahbariyat',
+      trustLine: 'Ishonch telefoni',
+      namePlaceholder: 'F.I.SH.',
     },
     common: {
       learnMore: 'Batafsil',

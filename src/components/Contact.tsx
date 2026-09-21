@@ -15,7 +15,7 @@ const EMPTY = { name: '', company: '', email: '', country: '', sector: '', messa
 // NOTE: replace the phone number with the real One-Gateway line before launch.
 const CONTACTS = [
   { icon: 'mail', label: 'info@investnavoi.com', href: 'mailto:info@investnavoi.com' },
-  { icon: 'phone', label: '+998 79 000 00 00', href: 'tel:+998790000000' },
+  { icon: 'phone', label: '+998 79 220 10 20 (1066)', href: 'tel:+998792201020' },
 ]
 
 export function Contact() {

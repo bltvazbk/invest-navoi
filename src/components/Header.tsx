@@ -7,12 +7,12 @@ import { LanguageSwitcher } from './LanguageSwitcher'
 import { ThemeToggle } from './ThemeToggle'
 
 const NAV = [
+  { id: 'government', key: 'nav.government' },
   { id: 'why', key: 'nav.why' },
   { id: 'sectors', key: 'nav.sectors' },
   { id: 'projects', key: 'nav.projects' },
-  { id: 'freezone', key: 'nav.freezone' },
+  { id: 'map', key: 'nav.map' },
   { id: 'incentives', key: 'nav.incentives' },
-  { id: 'process', key: 'nav.process' },
 ] as const
 
 export function Header() {

@@ -19,6 +19,13 @@ export interface Localized {
 /** Pick the active language from a Localized field, falling back to English. */
 export const L = (field: Localized, lang: Lang): string => field[lang] || field.en
 
+// Official external resources
+export const LINKS = {
+  govPortal: 'https://gov.uz/oz/navoi',
+  map: 'https://niim.vercel.app',
+  trustPhone: '+998 79 220 10 20',
+}
+
 export type ProjectStatus = 'operating' | 'construction' | 'planned'
 
 export interface Stat {
@@ -71,12 +78,24 @@ export interface ProcessStep {
 // ── Headline statistics ──────────────────────────────────────
 export const stats: Stat[] = [
   {
-    value: '110,800 km²',
+    value: '111,076 km²',
     label: { en: 'Territory — largest region of Uzbekistan', ru: 'Территория — крупнейший регион Узбекистана', uz: 'Hudud — O‘zbekistonning eng yirik viloyati' },
   },
   {
     value: '1.1 M+',
     label: { en: 'Population', ru: 'Население', uz: 'Aholi' },
+  },
+  {
+    value: '11',
+    label: { en: 'Districts', ru: 'Районов', uz: 'Tuman' },
+  },
+  {
+    value: '42,223 ha',
+    label: { en: 'Free land bank for investors', ru: 'Свободный земельный банк', uz: 'Investorlar uchun bo‘sh yer fondi' },
+  },
+  {
+    value: '744',
+    label: { en: 'Mapped investment plots', ru: 'Инвестплощадок на карте', uz: 'Xaritadagi investitsiya maydoni' },
   },
   {
     value: 'Top-5',
@@ -89,10 +108,6 @@ export const stats: Stat[] = [
   {
     value: '24/7',
     label: { en: 'Intercontinental air-cargo hub', ru: 'Межконтинентальный авиахаб', uz: 'Qit’alararo yuk aviamarkazi' },
-  },
-  {
-    value: '9',
-    label: { en: 'Priority investment sectors', ru: 'Приоритетных отраслей', uz: 'Ustuvor investitsiya tarmog‘i' },
   },
 ]
 
@@ -497,5 +512,32 @@ export const processSteps: ProcessStep[] = [
       ru: 'Стройте, нанимайте и запускайте производство — с постоянным сопровождением нашей команды.',
       uz: 'Quring, xodim yollang va ishlab chiqarishni boshlang — jamoamiz doimiy hamrohligida.',
     },
+  },
+]
+
+// ── Department leadership ────────────────────────────────────
+// Fill `name` and drop portrait photos into public/images/leaders/.
+// Until a name is set, the role card shows the "Full name" placeholder.
+export interface Leader {
+  role: Localized
+  name: string
+  photo?: string
+}
+
+export const leadership: Leader[] = [
+  {
+    role: { en: 'Head of the Department', ru: 'Начальник управления', uz: "Boshqarma boshlig'i" },
+    name: '',
+    photo: '/images/leaders/head.jpg',
+  },
+  {
+    role: { en: 'First Deputy Head', ru: 'Первый заместитель начальника', uz: 'Birinchi o‘rinbosar' },
+    name: '',
+    photo: '/images/leaders/deputy1.jpg',
+  },
+  {
+    role: { en: 'Deputy Head', ru: 'Заместитель начальника', uz: 'O‘rinbosar' },
+    name: '',
+    photo: '/images/leaders/deputy2.jpg',
   },
 ]

@@ -1,9 +1,11 @@
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Stats } from './components/Stats'
+import { Government } from './components/Government'
 import { WhyNavoi } from './components/WhyNavoi'
 import { Sectors } from './components/Sectors'
 import { Projects } from './components/Projects'
+import { InteractiveMap } from './components/InteractiveMap'
 import { FreeZone } from './components/FreeZone'
 import { Incentives } from './components/Incentives'
 import { Process } from './components/Process'
@@ -19,9 +21,11 @@ export default function App() {
       <main>
         <Hero />
         <Stats />
+        <Government />
         <WhyNavoi />
         <Sectors />
         <Projects />
+        <InteractiveMap />
         <FreeZone />
         <Incentives />
         <Process />
