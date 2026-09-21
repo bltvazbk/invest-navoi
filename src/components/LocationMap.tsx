@@ -1,9 +1,9 @@
 import { useLanguage } from '../i18n/LanguageContext'
 
-// Yandex Maps embed centred on the department's address in Navoi city.
-// Adjust the ll (lon,lat) / pt marker coordinates for pinpoint accuracy.
+// Yandex Maps embed pinned on the Navoi Region Government building
+// (Navoiy viloyat hokimligi, org id 162534550193).
 const YANDEX_SRC =
-  'https://yandex.com/map-widget/v1/?ll=65.3792%2C40.0844&z=15&pt=65.3792%2C40.0844%2Cpm2rdm'
+  'https://yandex.uz/map-widget/v1/?ll=65.373772%2C40.103350&z=17&mode=poi&poi%5Bpoint%5D=65.373772%2C40.103350&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D162534550193'
 
 export function LocationMap() {
   const { t } = useLanguage()
